@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { PlanetsComponent } from './components/planets/planets.component';
+import { PlanetsinfoService } from './services/planetsinfo.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet,PlanetsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'solar-system';
+  constructor(private readonly _planetService: PlanetsinfoService){}
+  ngOnInit(): void {
+   
+  }
+  
 }

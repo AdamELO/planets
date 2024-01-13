@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 5px;
+    background-image: url(./assets/noche.jpg);
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    animation: space 25s linear infinite alternate;
+}
+
+@keyframes space {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 0 100%
+    }
+}
