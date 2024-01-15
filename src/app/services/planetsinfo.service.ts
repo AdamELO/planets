@@ -19,16 +19,25 @@ export class PlanetsinfoService {
 
   constructor(private readonly _httpClient: HttpClient) {
     forkJoin([this.api1Call, this.api2Call])
-    .pipe(
-      map((api1Data, api2Data) => {
-        return api1Data.filter(api1Item => api1Item.englishName === "Earth" /*api2Data.find(api2Item => api2Item.name)*/)
-      }
+    // .pipe(
+    //   map((api1Data, api2Data) => {
+    //     return api1Data.filter(api1Item => api1Item.englishName === "Earth" /*api2Data.find(api2Item => api2Item.name)*/)
+    //   }
 
-      )
-    ).subscribe(
-      res => {
-        console.log(res);
-        this._planets.set(res)
+    //   )
+    // )
+    .subscribe(
+      (values) => {
+        // console.log(values.at(1)),
+        // console.log(values.at(0)),
+        const r = values.at(1).map((v:any) => { 
+          const obj = values.at(0).bodies.find((o: any) => o.englishName === v.name);
+          console.log(obj)
+          return {...v, test: obj?.englishName}
+        });
+
+        console.log(r)
+        //this._planets.set(res)
       } 
     )
   }
