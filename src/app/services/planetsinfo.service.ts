@@ -23,9 +23,11 @@ export class PlanetsinfoService {
       (values) => {
         const r = values.at(1).map((v:any) => { 
           const obj = values.at(0).bodies.find((o: any) => o.englishName === v.name);
-          console.log(obj)
-          return {...v, test: obj?.englishName}
+          // console.log(obj.vol.volValue);
+          
+          return {...v, infos: obj}
         });
+        // console.log(r);
         this._planets.set(r)
       } 
     )

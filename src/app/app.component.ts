@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { PlanetsComponent } from './components/planets/planets.component';
@@ -12,12 +12,13 @@ import { Planet } from './models/planet.model';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'solar-system';
-  planets: Planet[] = []
-  constructor(private readonly _planetService: PlanetsinfoService) { }
-  ngOnInit(): void {
-    this.planets = this._planetService.planets()
+  planets: Signal<Planet[]>
+  constructor(private readonly _planetService: PlanetsinfoService) { 
+    this.planets = this._planetService.planets
+    effect(() => {
+      console.log(this.planets())
+    })  
   }
-
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Planet } from '../../models/planet.model';
 
 @Component({
@@ -13,24 +13,12 @@ import { Planet } from '../../models/planet.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlanetsComponent {
-  @Input()
-  planet : Planet = {
-    name: '',
-    description: '',
-    mass: {
-        massValue: 0,
-        massExponent: 0,
-    },
-    vol: {
-        volValue: 0,
-        volExponent: 0,
-    },
-    gravity: 0,
-    sideralOrbit: 0,
-    sideralRotation: 0,
-    avgTemp: 0,
-    moons: [{}],
-    distanceFromSun: 0,
-    img: ''
+  @Input() planet : any
+
+
+  calculateSize(): number {
+    const size : number =  Math.pow(10, this.planet.infos.vol.volExponent / 10);
+    return size * 7
   }
+
 }

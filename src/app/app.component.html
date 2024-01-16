@@ -1,6 +1,6 @@
 <main>
   <div class="sun"></div>
-  @for (item of planets; track $index) {
+  @for (item of planets(); track $index) {
     <app-planets [planet]="item"></app-planets>
   }
 </main>
