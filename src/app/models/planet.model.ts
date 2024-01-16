@@ -1,15 +1,19 @@
 export interface Planet {
-    name : string,
+    name: string,
     description: string,
-    massValue : number,
-    massExponent : number,
-    volValue : number,
-    volExponent : number,
+    mass: {
+        massValue: number,
+        massExponent: number,
+    },
+    vol: {
+        volValue: number,
+        volExponent: number,
+    },
     gravity: number,
     sideralOrbit: number,
     sideralRotation: number,
     avgTemp: number,
     moons: [{}],
-    distanceFromSun: number
-    img :string
+    distanceFromSun: number,
+    img: string
 }

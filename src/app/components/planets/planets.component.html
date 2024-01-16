@@ -1,3 +1,3 @@
-<div class="planet" [ngStyle]="{'height' : size, 'width' : size}">
-    <p>{{name}}</p>
+<div class="planet" [ngStyle]="{'height' : (planet.vol.volValue * 2), 'width' : (planet.vol.volValue * 2), 'background-image': 'url(' + planet.img + ')'}">
+    <span>{{planet.name}}</span>
 </div>

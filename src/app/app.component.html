@@ -1,12 +1,6 @@
 <main>
   <div class="sun"></div>
-  <!-- <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets>
-  <app-planets></app-planets> -->
+  @for (item of planets; track $index) {
+    <app-planets [planet]="item"></app-planets>
+  }
 </main>
