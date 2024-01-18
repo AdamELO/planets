@@ -1,4 +1,4 @@
-<div class="planet" [ngStyle]="{'height' : calculateSize() + 'px', 'width' : calculateSize() + 'px', 'background-image': 'url(' + planet.img + ')'}">
+<div class="planet" [@keyframes] [ngStyle]="{'height' : calculateSize() + 'px', 'width' : calculateSize() + 'px', 'background-image': 'url(' + planet.img + ')'}">
     <span>{{planet.name}} &nbsp;</span>
     <span>{{planet.infos.vol.volValue}} &nbsp;</span>
     <span>{{planet.infos.vol.volExponent}}</span>
