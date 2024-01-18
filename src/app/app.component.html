@@ -1,6 +1,6 @@
-<main>
+<main style="display: flex;justify-content: space-between;">
   <div class="sun"></div>
   @for (item of planets(); track $index) {
-    <app-planets [planet]="item"></app-planets>
+  <app-planets [planet]="item"></app-planets>
   }
 </main>

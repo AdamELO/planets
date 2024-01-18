@@ -1,12 +1,16 @@
-main{
+main {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
 }
-.sun{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+
+.sun {
     background-color: orange;
-    box-shadow: 0 0 35px 5px yellow, 0 0 25px 10px yellow inset;
-    opacity: 0.9;
+    box-shadow: 0 0 35px 5px yellow, -5px 0 20px 8px yellow inset;
+    opacity: 0.99;
+    width: 15%;
+    height: 80vh;
+    border-radius: 0 100% 100% 0 / 50%;
 }

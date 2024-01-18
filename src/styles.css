@@ -1,13 +1,13 @@
 body {
-    margin: 0 5px;
+    margin: 0 10px 0 0;
     background-image: url(./assets/noche.jpg);
     box-sizing: border-box;
     display: flex;
-    height: 100vh;
-    justify-content: flex-start;
     align-items: center;
+    height: 100vh;
     color: white;
     animation: space 25s linear infinite alternate;
+    overflow: hidden;
 }
 
 @keyframes space {
