@@ -17,6 +17,10 @@ export class PlanetsinfoService {
     return this._planets.asReadonly();
   }
 
+  get(name: string) {
+    return this.planets().find(c => c.name === name);
+  }
+
   constructor(private readonly _httpClient: HttpClient) {
     forkJoin([this.api1Call, this.api2Call])
     .subscribe(

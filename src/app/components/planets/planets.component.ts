@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Planet } from '../../models/planet.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-planets',
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink
   ],
   templateUrl: './planets.component.html',
   styleUrl: './planets.component.css',
