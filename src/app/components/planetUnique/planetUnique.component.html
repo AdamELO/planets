@@ -1,1 +1,5 @@
-<div class="planetUnique planetCommon" [ngStyle]="{'background-image': 'url(' + planet.img + ')'}"></div>
+<div class="planetUnique planetCommon" [ngStyle]="{'background-image': 'url(' + planet.img + ')'}">
+@if (planet.name == "Saturn") {
+    <div class='ring'></div>
+}
+</div>

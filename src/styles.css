@@ -4,16 +4,34 @@ body {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    height: 100%!important;
+    height: 100% !important;
     color: white;
     animation: space 25s linear infinite alternate;
     overflow: hidden;
 }
-.planetCommon{
+
+.planetCommon {
     border-radius: 50%;
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
     background-size: cover;
     border: 2px solid #000;
+    z-index: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.ring {
+    width: 140%;
+    height: 150%;
+    border: solid 20px rgb(239, 205, 157);
+    border-radius: 50%;
+    top: -25%;
+    left: -20%;
+    position: absolute;
+    transform: rotate3d(0.8, 0.2, 75deg);
+    box-sizing: border-box;
+    animation: ring 10s linear infinite alternate;
 }
 
 @keyframes space {
@@ -23,5 +41,15 @@ body {
 
     100% {
         background-position: 0 100%
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate3d(0.8, 0.2, 0, 80deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 0.2, 0, 70deg);
     }
 }

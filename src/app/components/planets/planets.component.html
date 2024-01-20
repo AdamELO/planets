@@ -1,3 +1,6 @@
 <div [routerLink]="['/planet', planet.name]" class="planet planetCommon" [ngStyle]="{'height' : calculateSize() + 'px', 'width' : calculateSize() + 'px', 'background-image': 'url(' + planet.img + ')'}">
     <span>{{planet.name}}</span>
+    @if (planet.name == "Saturn") {
+        <div class="ring"></div>
+    }
 </div>
