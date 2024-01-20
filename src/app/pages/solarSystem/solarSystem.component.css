@@ -4,6 +4,8 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 100% !important;
+  height: max-content; 
+  min-height: 100vh;
 }
 .sun {
   background-color: orange;
