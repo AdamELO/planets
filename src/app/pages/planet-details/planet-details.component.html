@@ -8,10 +8,10 @@
         <p>{{ planetInfo.description }}</p>
         <div style="display: flex; flex: 1; justify-content: space-between;">
             <div>
-                <p>Gravity : {{planetInfo.infos.gravity}} N/Kg</p>
+                <p>Gravity : {{planetInfo.infos.gravity}} m/s<sup>2</sup></p>
                 <p>Mass : {{planetInfo.infos.mass.massValue}} X 10<sup>{{planetInfo.infos.mass.massExponent}}</sup> Kg</p>
                 <p>Day rotation : {{ absoluteValue()}} hours</p>
-                <p>Average temperature : {{ planetInfo.infos.avgTemp}}</p>
+                <p>Average temperature : {{ planetInfo.infos.avgTemp}} K</p>
             </div>
             <div>
                 <p>Distance from Sun : {{(planetInfo.infos.aphelion + planetInfo.infos.perihelion )/2}} Km</p>
