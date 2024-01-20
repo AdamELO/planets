@@ -1,1 +1,2 @@
-https://api.le-systeme-solaire.net/swagger/
+- npm i
+- ng s

@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Planet } from '../../models/planet.model';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -16,7 +15,6 @@ import { RouterLink } from '@angular/router';
 })
 export class PlanetsComponent {
   @Input() planet : any
-
 
   calculateSize(): number {
     const size : number =  Math.pow(10, this.planet.infos.vol.volExponent / 10);

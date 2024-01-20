@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
-import { PlanetDetailsComponent } from './components/planet-details/planet-details.component';
-import { AppComponent } from './app.component';
+import { SolarSystemComponent } from './pages/solarSystem/solarSystem.component';
+import { PlanetDetailsComponent } from './pages/planet-details/planet-details.component';
 
 export const routes: Routes = [
-    { path: 'solar-system', component: AppComponent},
+    { path: '', redirectTo: 'solar-system', pathMatch: 'full' },
+    { path: 'solar-system', component: SolarSystemComponent},
     { path: 'planet/:name', component: PlanetDetailsComponent },
+    { path: '**', component: SolarSystemComponent }
 ];

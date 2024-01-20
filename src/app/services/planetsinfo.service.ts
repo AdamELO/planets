@@ -17,8 +17,12 @@ export class PlanetsinfoService {
     return this._planets.asReadonly();
   }
 
-  get(name: string) {
-    return this.planets().find(c => c.name === name);
+  public get(name: string|null) {
+    if (name !== null) {
+      return this.planets().find(c => c.name === name);
+    }else{
+      return console.log("error! name is null");
+    }
   }
 
   constructor(private readonly _httpClient: HttpClient) {
@@ -27,11 +31,8 @@ export class PlanetsinfoService {
       (values) => {
         const r = values.at(1).map((v:any) => { 
           const obj = values.at(0).bodies.find((o: any) => o.englishName === v.name);
-          // console.log(obj.vol.volValue);
-          
           return {...v, infos: obj}
         });
-        // console.log(r);
         this._planets.set(r)
       } 
     )
