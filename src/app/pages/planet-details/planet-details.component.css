@@ -1,9 +1,13 @@
-.planetDetails {
+.planetUnique {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     max-height: max-content;
+}
+
+.planetDetails{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 a {
@@ -15,4 +19,16 @@ a {
     font-weight: 600;
     font-size: larger;
     color: burlywood;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid #000;
+    padding: 20px;
 }

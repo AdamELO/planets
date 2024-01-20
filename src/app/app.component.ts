@@ -11,5 +11,5 @@ import { SolarSystemComponent } from './pages/solarSystem/solarSystem.component'
   styleUrl: './app.component.css'
 })
 export class AppComponent{
-  title = 'solar-system';
+  title = 'solar system';
 }

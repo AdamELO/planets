@@ -1,5 +1,26 @@
-<a routerLink="solar-system">☀️🪐🪐Solar System 🪐🪐🪐</a>
-<div class="planetDetails">
-    <h1>{{nameParam}}</h1>
-    <app-planet-unique [planet]="planetInfo"></app-planet-unique>
+<a routerLink="/solar-system">☀️🪐🪐 Check other planets 🪐🪐🪐</a>
+<div class="container">
+    <div class="planetUnique box">
+        <app-planet-unique [planet]="planetInfo"></app-planet-unique>
+    </div>
+    <div class="box planetDetails">
+        <h1 align="center" style="color: burlywood;">{{planetInfo.name}}</h1>
+        <p>{{ planetInfo.description }}</p>
+        <div style="display: flex; flex: 1; justify-content: space-between;">
+            <div>
+                <p>Gravity : {{planetInfo.infos.gravity}} N/Kg</p>
+                <p>Mass : {{planetInfo.infos.mass.massValue}} X 10<sup>{{planetInfo.infos.mass.massExponent}}</sup> Kg</p>
+                <p>Day rotation : {{ absoluteValue()}} hours</p>
+                <p>Average temperature : {{ planetInfo.infos.avgTemp}}</p>
+            </div>
+            <div>
+                <p>Distance from Sun : {{(planetInfo.infos.aphelion + planetInfo.infos.perihelion )/2}} Km</p>
+                <p>Volume : {{planetInfo.infos.vol.volValue}} x 10<sup>{{planetInfo.infos.vol.volExponent}}</sup> Km<sup>3</sup></p>
+                <p>Year rotation : {{planetInfo.infos.sideralOrbit}} days</p>
+                <p>Moons: {{planetInfo.infos.moons?.length || 'none'}}</p>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
 </div>

@@ -17,7 +17,7 @@ export class PlanetsinfoService {
     return this._planets.asReadonly();
   }
 
-  public get(name: string|null) {
+  public get(name: string|null) : any {
     if (name !== null) {
       return this.planets().find(c => c.name === name);
     }else{

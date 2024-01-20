@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Planet } from '../../models/planet.model';
 
 @Component({
   selector: 'app-planet-unique',
@@ -12,6 +13,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlanetUniqueComponent{
-  @Input() planet : any
+  @Input() planet! : Planet
   constructor(){}
 }
