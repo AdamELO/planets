@@ -4,7 +4,6 @@ import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { PlanetsinfoService } from '../../services/planetsinfo.service';
 import { PlanetUniqueComponent } from '../../components/planetUnique/planetUnique.component';
 import { Planet } from '../../models/planet.model';
-// import {  } from '@angular/common';
 
 @Component({
   selector: 'app-planet-details',
