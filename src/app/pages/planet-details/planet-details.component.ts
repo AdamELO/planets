@@ -28,7 +28,7 @@ export class PlanetDetailsComponent implements OnInit {
     });
   }
 
-  absoluteValue() {
+  absoluteValue(): number {
     return Math.abs(this.planetInfo.infos.sideralRotation);
   }
 }
